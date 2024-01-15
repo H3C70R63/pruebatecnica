@@ -1,0 +1,87 @@
+<app-toolbar [title]="title"></app-toolbar>
+<div class="conten">
+  <div class="container">
+    <form
+      class="example-form"
+      style="padding-top: 50px; justify-content: center; display: flex"
+    >
+      <mat-form-field class="example-full-width" style="height: 50px">
+        <input matInput placeholder="Search..." style="background-color: black;" />
+      </mat-form-field>
+      <button mat-icon-button>
+        <mat-icon>search</mat-icon>
+      </button>
+    </form>
+    <h3>Order:</h3>
+    <mat-card class="card">
+      <mat-card-header style="justify-content: space-between">
+        <mat-icon>train</mat-icon>
+        <mat-card-title>FCL</mat-card-title>
+      </mat-card-header>
+      <div class="divider"></div>
+      <div style="height: 197px"></div>
+      <mat-card-actions style="justify-content: space-between; padding: 0%">
+        <button
+          mat-button
+          style="
+            background-color: #ffff00;
+            color: #000000;
+            margin-top: 7px;
+            height: 50px;
+            width: 199px;
+            border-radius: 0 25px 25px 25px;
+            background-color: #ffff00;
+            box-shadow: inset 2px 2px 4px 0 #ffff4e,
+              inset -2px -2px 4px 0 #c2c200;
+          "
+        >
+          Is time for pickup
+        </button>
+        <button
+          mat-button
+          style="
+            background-color: #ffff00;
+            color: #000000;
+            margin-top: 10px;
+            height: 43.87px;
+            width: 130px;
+            border-radius: 21.93px;
+            background-color: #ffff00;
+            box-shadow: inset -2px -2px 4px 0 #c2c200,
+              inset 2px 2px 4px 0 #ffff80;
+          "
+        >
+          Resume <mat-icon>sentiment_neutral</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+    <h3 style="margin-top: 50px">Order:</h3>
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-icon>train</mat-icon>
+        <mat-card-title>FTL</mat-card-title>
+      </mat-card-header>
+      <div class="divider"></div>
+      <div style="height: 197px"></div>
+      <mat-card-actions style="justify-content: end; padding: 0%">
+        <button
+          mat-button
+          style="
+            background-color: #ffff00;
+            color: #000000;
+            margin-top: 6px;
+            height: 43.87px;
+            width: 130px;
+            border-radius: 21.93px;
+            background-color: #ffff00;
+            box-shadow: inset -2px -2px 4px 0 #c2c200,
+              inset 2px 2px 4px 0 #ffff80;
+          "
+        >
+          Resume <mat-icon>sentiment_neutral</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

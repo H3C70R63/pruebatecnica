@@ -1,0 +1,9 @@
+.content{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.icon-color {
+    color: #FFFF00;
+  }

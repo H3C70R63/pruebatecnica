@@ -1,0 +1,45 @@
+.content {
+  display: flex;
+
+  padding-left: 41px;
+  padding-right: 41px;
+  color: "#FFFF00";
+}
+
+.container {
+  margin-left: 41px;
+}
+
+.example-form {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.example-full-width {
+  width: 80%;
+  max-width: 400px;
+}
+
+.example-icon {
+  margin-right: 8px;
+}
+
+.card {
+  margin-top: -40px;
+  background: linear-gradient(45deg, #080c0f, rgb(39, 39, 39));
+  height: 292px;
+}
+
+.maincard {
+  border: 1px solid rgba(146, 142, 142, 0.705);
+  width: 390 !important;
+  height: 300 !important;
+  border-radius: 35px 0 0 35px;
+  background: linear-gradient(45deg, #080c0f, rgb(39, 39, 39));
+}
+.divider {
+  height: 1px;
+  background-color: rgba(146, 142, 142, 0.705);
+  width: 100%;
+}

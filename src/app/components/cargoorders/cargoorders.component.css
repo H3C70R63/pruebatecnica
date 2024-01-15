@@ -1,0 +1,68 @@
+.content {
+  display: flex;
+  margin-right: 41px;
+  margin-left: 41px;
+}
+
+.example-form {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.example-full-width {
+  width: 80%;
+  max-width: 400px;
+}
+
+.example-icon {
+  margin-right: 8px;
+}
+
+.card {
+  border: 1px solid rgba(146, 142, 142, 0.705);
+  border-radius: 25px;
+  background: linear-gradient(45deg, #080c0f, rgb(39, 39, 39));
+  height: 292px;
+}
+.cardorders {
+  background-color: black;
+  padding-top: 30px;
+}
+.divider {
+  height: 1px;
+  background-color: rgba(146, 142, 142, 0.705);
+  width: 100%;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333; /* Color de fondo para las tabs */
+  padding: 10px;
+}
+
+.tab {
+  color: white; /* Color de letra para las tabs no seleccionadas */
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: yellow; /* Color de letra para la tab seleccionada */
+}
+
+.tab.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: yellow; /* Color de la barrita debajo del texto para la tab seleccionada */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

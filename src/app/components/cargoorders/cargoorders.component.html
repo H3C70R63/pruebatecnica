@@ -1,0 +1,163 @@
+<app-toolbar [title]="title"></app-toolbar>
+<div class="conten">
+  <mat-tab-group
+    style="padding-left: 41px; padding-right: 41px"
+    class="custom-tabs"
+  >
+    <mat-tab label="Upcoming" style="background-color: beige"
+      ><form
+        [formGroup]="searhcForm"
+        (ngSubmit)="searchOrder()"
+        class="example-form"
+        style="
+          padding-top: 50px;
+          justify-content: center;
+          display: flex;
+          padding-bottom: 30px;
+        "
+      >
+        <input
+          style="background-color: #000000; color: aliceblue; width: 80%"
+          formControlName="numOrderSearch"
+          matInput
+          placeholder="Search..."
+        />
+        <button mat-icon-button type="submit">
+          <mat-icon>search</mat-icon>
+        </button>
+      </form>
+      <mat-card *ngFor="let order of jsonDataOrders" class="cardorders">
+        <h3>Order: #{{ order.order_number }}</h3>
+        <mat-card class="card">
+          <mat-card-header
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <div style="display: flex; align-items: center">
+              <app-freight></app-freight>
+              <mat-card-title style="margin-left: 15px">{{
+                order.type
+              }}</mat-card-title>
+            </div>
+            <div style="margin-left: auto">
+              <label>In transit</label>
+            </div>
+          </mat-card-header>
+
+          <div class="divider"></div>
+          <div
+            style="
+              height: 187px;
+              flex-direction: row;
+              display: flex;
+              padding-top: 10px;
+            "
+          >
+            <div
+              style="
+                height: 187;
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+              "
+            ></div>
+            <div
+              style="
+                height: 187;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+              "
+            >
+              <P>{{ order.destinations[0].address }}</P>
+              <P>{{ order.destinations[1].address }}</P>
+            </div>
+          </div>
+          <mat-card-actions style="justify-content: space-between; padding: 0%">
+            <button
+              mat-button
+              style="
+                background-color: #ffff00;
+                color: #000000;
+                margin-top: 6px;
+                height: 50px;
+                width: 199px;
+                border-radius: 0 25px 25px 25px;
+                background-color: #ffff00;
+                box-shadow: inset 2px 2px 4px 0 #ffff4e,
+                  inset -2px -2px 4px 0 #c2c200;
+                font-family: 'Gotham Medium', sans-serif;
+                font-size: 16px;
+              "
+            >
+              Is time for pickup
+            </button>
+
+            <button
+              routerLink="/cargodetails"
+              mat-button
+              style="
+                background-color: #ffff00;
+                color: #000000;
+                margin-top: 6px;
+                height: 43.87px;
+                width: 130px;
+                border-radius: 21.93px;
+                background-color: #ffff00;
+                box-shadow: inset -2px -2px 4px 0 #c2c200,
+                  inset 2px 2px 4px 0 #ffff80;
+              "
+            >
+              Resume 
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-card>
+
+      <!-- <h3 style="margin-top: 50px">Order:</h3>
+      <mat-card class="card">
+        <mat-card-header
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <div style="display: flex; align-items: center">
+            <app-active-orders></app-active-orders>
+            <mat-card-title style="margin-left: 15px">FCL</mat-card-title>
+          </div>
+          <div style="margin-left: auto">
+            <label>in coming</label>
+          </div>
+        </mat-card-header>
+        <div class="divider"></div>
+        <div style="height: 197px"></div>
+        <mat-card-actions style="justify-content: end; padding: 0%">
+          <button
+            routerLink="/cargodetails"
+            mat-button
+            style="
+              background-color: #ffff00;
+              color: #000000;
+              margin-top: 6px;
+              height: 43.87px;
+              width: 130px;
+              border-radius: 21.93px;
+              background-color: #ffff00;
+              box-shadow: inset -2px -2px 4px 0 #c2c200,
+                inset 2px 2px 4px 0 #ffff80;
+            "
+          >
+            Resume <mat-icon>sentiment_neutral</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card> -->
+    </mat-tab>
+    <mat-tab label="Completed"> comming soon </mat-tab>
+    <mat-tab label="Past"> Comming soon </mat-tab>
+  </mat-tab-group>
+</div>
